@@ -2,7 +2,9 @@ import user from "../models/user"
 
 export default class userController{
  public async login (data:any){
-    const loginData=await user.find({email:data.email,isDeleted:false,password:data.password}).lean()
+    console.log(data)
+    const loginData=await user.findOne({email:data.email,isDeleted:false,password:data.password}).lean()
+    console.log(loginData,"line 6")
     if(loginData){
         return true
     }else{
