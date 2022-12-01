@@ -9,20 +9,13 @@ export default function setEnvironment() {
     const env = params[0].split('=')[1];
     console.log("Environment: ", env);
     nconf.set('NODE_ENV', env);
-    let envFile = './config/dev.json';
+    let envFile = './config/test.json';
     switch (env.toLowerCase()) {
-        case 'prod':
-            envFile = './config/prod.json';
-            break;
         case 'test':
             envFile = './config/test.json';
             break;
-        case 'qa':
-            envFile = './config/qa.json';
-            break;
-        case 'dev': //default is 'dev'
         default:
-            envFile = './config/dev.json';
+            envFile = './config/test.json';
             break;
     }
     nconf.file({ file: envFile });
