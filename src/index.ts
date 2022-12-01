@@ -14,7 +14,7 @@ app.use(express.json({limit: '50mb'}));
 // app.use(morganMiddleware)
 
 
-app.use("/websiteDefaulttheme", router);
+app.use("/liveproject", router);
 
 
 //console.log("Auth Middleware Connecting to the DB: ", nconf.get('db'))

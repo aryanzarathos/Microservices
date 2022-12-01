@@ -1,8 +1,5 @@
 {
-  "webunideapi": "mongodb://localhost:27017/edneed_ecom",
-  "ecomm": "mongodb://localhost:27017/edneed_ecom",
-  "services": "mongodb://localhost:27017/edneed_services",
-  "mongodb3": "mongodb://localhost:27017/webunideapi",
+  "webunideapi": "mongodb+srv://zarathos:<password>@cluster0.hnufsmv.mongodb.net/?retryWrites=true&w=majority",
   "env": "test",
   "port": "5000",
   "auth_external_url": "http://localhost:9000/authService/checktoken",
