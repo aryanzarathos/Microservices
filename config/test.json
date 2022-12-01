@@ -1,0 +1,17 @@
+{
+  "webunideapi": "mongodb://localhost:27017/edneed_ecom",
+  "ecomm": "mongodb://localhost:27017/edneed_ecom",
+  "services": "mongodb://localhost:27017/edneed_services",
+  "mongodb3": "mongodb://localhost:27017/webunideapi",
+  "env": "test",
+  "port": "5000",
+  "edneed_api": "https://api.getmelight.com",
+  "edneed_email": "info@getmelight.com",
+  "mailer_host": "email-smtp.us-east-1.amazonaws.com",
+  "auth_external_url": "http://localhost:9000/authService/checktoken",
+  "template_name":"MySite",
+  "online_store": "63187f0bed42kunu79826673",
+  "blog": "5efd333cbe16anki70150322",
+  "booking": "62bbdb6ac574kira98719473",
+  "portfolio": "62bbdb6ac574zara98719476"
+}

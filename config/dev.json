@@ -1,0 +1,20 @@
+{
+  "webunideapi": "mongodb://WaEBUadNIdeminShE:W20eAdThUe3deX0TH9@api.getmelight.com:27017/webunideapi",
+  "ecomm": "mongodb://WaEBUadNIdeminShE:W20eAdThUe3deX0TH9@api.getmelight.com:27017/edneed_ecom",
+  "services": "mongodb://WaEBUadNIdeminShE:W20eAdThUe3deX0TH9@api.getmelight.com:27017/edneed_services",
+  "middleware": "mongodb://WaEBUadNIdeminShE:W20eAdThUe3deX0TH9@api.getmelight.com:27017/edneed_middleware",
+  "env": "dev",
+  "port": "58929",
+  "edneed_api": "https://api.getmelight.com",
+  "edneed_email": "info@edneed.com",
+  "mailer_host": "smtp.gmail.com",
+  "auth_external_url": "https://api.getmelight.com/authService/checktoken",
+  "template_name":"MySite",
+  "website_edneed_api":"https://commonservices.getmelight.com",
+  "ecomDefaultTemplateID":"5efd7980be16b16e6b061b49",
+  "serviceDefaultTemplateID":"5efd3320be16b16e6b079849",
+  "online_store": "63187f0bed42kunu79826673",
+  "blog": "5efd333cbe16anki70150322",
+  "booking": "62bbdb6ac574kira98719473",
+  "portfolio": "62bbdb6ac574zara98719476"
+}
