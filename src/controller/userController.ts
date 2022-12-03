@@ -19,4 +19,12 @@ export default class userController{
         return false
     }
 }
+ public async UserGet (){
+    const loginData=await user.find({isDeleted:false})
+    if(loginData){
+        return loginData
+    }else{
+        return loginData
+    }
+}
 }
