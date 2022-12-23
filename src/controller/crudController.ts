@@ -16,7 +16,7 @@ export default class userController{
         return loginData
 }
  public async CrudUserDelete (id:any){
-    const loginData=await user.findByIdAndUpdate({_id:id,isDeleted:false},{isDeleted:true})
+    const loginData=await user.findByIdAndUpdate(id,{isDeleted:true})
     if(loginData){
         return loginData
     }else{
@@ -24,7 +24,7 @@ export default class userController{
     }
 }
  public async CrudUserEdit (data:any,id:any){
-    const loginData=await user.findByIdAndUpdate({_id:id,isDeleted:false},{data},{new:true})
+    const loginData=await user.findByIdAndUpdate(id,{data},{new:true})
     if(loginData){
         return loginData
     }else{
