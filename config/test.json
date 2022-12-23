@@ -1,5 +1,5 @@
 {
-  "webunideapi": "mongodb+srv://zarathos:Kumar@123@cluster0.hnufsmv.mongodb.net/?retryWrites=true&w=majority",
+  "webunideapi": "",
   "env": "test",
   "port": "5000",
   "auth_external_url": "http://localhost:9000/authService/checktoken",
