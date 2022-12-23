@@ -6,6 +6,11 @@ export default class userController{
     const loginData=await user.find({isDeleted:false}).lean()
     return loginData
 }
+ public async CrudSingleUserGet (id:any){
+
+    const loginData=await user.findOne({_id:id,isDeleted:false}).lean()
+    return loginData
+}
  public async CrudUserPost (data:any){
     const loginData=await user.create(data)
         return loginData
