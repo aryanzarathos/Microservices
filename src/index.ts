@@ -1,38 +1,41 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-// const graphqlHttp = require('express-graphql');
-const { buildSchema } = require('graphql');
-const { graphqlHTTP } = require('express-graphql');
-// const graphqlHTTP = require('express-graphql').graphqlHTTP;
+import express, { Application } from "express";
+import setEnvironment from "./env";
+setEnvironment();
+import router from "./routes/index";
+import cors from "cors";
+import nconf from "nconf";
+import mongoose from "mongoose";
+// import Auth from "./middleware/authMiddleware";
+// import morganMiddleware from './middleware/morganMiddleware' ; 
 
-const app = express();
+const app: Application = express();
+app.use(cors());
+app.use(express.json({limit: '50mb'}));
+// app.use(morganMiddleware)
 
-app.use(bodyParser.json());
 
-app.use('/graphql',graphqlHTTP({
-    schema: buildSchema(`
-        type RootQuery {
-            events: [String!]!
-        }
-        type RootMutation {
-            createEvent(name: String): String
-        }
-        schema {
-            query: RootQuery
-            mutation: RootMutation
-        }
-    `),
-    rootValue: {
-      events: () => {
-        return ['Romantic Cooking', 'Sailing', 'All-Night Coding'];
-      },
-      createEvent: (args:any) => {
-        const eventName = args.name;
-        return eventName;
-      }
-    },
-    graphiql: true
-  })
+app.use("/liveproject", router);
+
+
+//console.log("Auth Middleware Connecting to the DB: ", nconf.get('db'))
+
+mongoose.connect(
+  nconf.get("webunideapi"),
+  {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  () => {
+    console.log("website template theme Connected to edneed DB");
+  }
 );
 
-app.listen(5000);
+var server=app.listen(nconf.get('port'), () => {
+  console.log("api is running on port", nconf.get("port"));
+});
+
+server.timeout = 1000000;
+// app.listen(nconf.get("port"), () => {
+//   console.log("website template theme api is running on port", nconf.get("port"));  
+// });
