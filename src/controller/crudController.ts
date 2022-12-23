@@ -24,7 +24,7 @@ export default class userController{
     }
 }
  public async CrudUserEdit (data:any,id:any){
-    const loginData=await user.findByIdAndUpdate(id,{data},{new:true})
+    const loginData=await user.findByIdAndUpdate(id,data,{new:true})
     if(loginData){
         return loginData
     }else{
