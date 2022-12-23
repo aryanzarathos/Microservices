@@ -3,7 +3,7 @@ import user from "../models/crudUser"
 export default class userController{
  public async CrudUserGet (){
 
-    const loginData=await user.findOne({isDeleted:false}).lean()
+    const loginData=await user.find({isDeleted:false}).lean()
     return loginData
 }
  public async CrudUserPost (data:any){
