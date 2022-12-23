@@ -26,19 +26,19 @@ router.get("/CrudUserGet", async(req: any, res: any) => {
     const result = await controller.CrudUserGet()
     return res.send(result)
 });
-router.get("/CrudUserPost", async(req: any, res: any) => {
+router.post("/CrudUserPost", async(req: any, res: any) => {
     const data=req.body;
     const controller = new crudController()
     const result = await controller.CrudUserPost(data)
     return res.send(result)
 });
-router.get("/CrudUserDelete", async(req: any, res: any) => {
+router.delete("/CrudUserDelete", async(req: any, res: any) => {
     const id=req.query.id
     const controller = new crudController()
     const result = await controller.CrudUserDelete(id)
     return res.send(result)
 });
-router.get("/CrudUserEdit", async(req: any, res: any) => {
+router.patch("/CrudUserEdit", async(req: any, res: any) => {
     const data=req.body;
     const id=req.query.id
     const controller = new crudController()
